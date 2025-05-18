@@ -65,7 +65,7 @@ CMake	≥ 3.15	Cross-platform build tool
 🧪 Build Instructions
 
 # Clone and build
-git clone https://github.com/yourusername/ParallelizeIt-QT-OpenMP.git
+git clone https://github.com/Mohamed-Magdy-Dewidar/ParallelizeIt-QT-OpenMP.git
 cd ParallelizeIt-QT-OpenMP
 
 open the .pro file using QT Creator and the run the Project
