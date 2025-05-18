@@ -117,15 +117,18 @@ QPushButton:pressed {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">   background-color: rgb(255, 170, 127);
-    font: 700 14pt &quot;Segoe UI&quot;;
-    color: #2e2e2e;
-    border-radius: 8px;
-    padding: 10px;
-    border: 2px solid #1b5e20;
-
-
+      <string notr="true">QPlainTextEdit {
+    background-color: rgb(255, 170, 127);  /* Orange-ish */
+    font: 700 14pt &quot;Segoe UI&quot;;             /* Bold, 14pt Segoe UI */
+    color: black;                          /* Optional: Set text color for contrast */
+    border: 1px solid #555;                /* Optional: Add subtle border */
+    padding: 6px;                          /* Optional: Improve readability */
+    border-radius: 6px;                    /* Optional: Rounded corners */
+}
 </string>
+     </property>
+     <property name="plainText">
+      <string/>
      </property>
     </widget>
     <widget class="QPushButton" name="pb_ParallelizeCode">
@@ -170,14 +173,14 @@ QPushButton:pressed {
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">
+      <string notr="true">QPlainTextEdit {
     background-color: rgb(255, 170, 127);  /* Orange-ish */
     font: 700 14pt &quot;Segoe UI&quot;;             /* Bold, 14pt Segoe UI */
     color: black;                          /* Optional: Set text color for contrast */
     border: 1px solid #555;                /* Optional: Add subtle border */
     padding: 6px;                          /* Optional: Improve readability */
     border-radius: 6px;                    /* Optional: Rounded corners */
-
+}
 </string>
      </property>
     </widget>
