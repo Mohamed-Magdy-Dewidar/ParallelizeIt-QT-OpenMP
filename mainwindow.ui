@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>948</width>
-    <height>691</height>
+    <width>1416</width>
+    <height>1032</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,16 +17,21 @@
    <widget class="QLabel" name="Bank_System_LB">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>0</y>
-      <width>811</width>
+      <x>10</x>
+      <y>20</y>
+      <width>1371</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(62, 54, 63);
-font: 24pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QLabel {
+    background-color: rgb(62, 54, 63);  /* Dark purple-gray background */
+    font: 700 24pt &quot;Segoe UI&quot;;          /* Bold large text for prominence */
+    color: rgb(255, 255, 255);          /* White text for contrast */
+    padding: 6px 12px;                  /* Adds breathing space inside the label */
+    border-radius: 8px;                 /* Rounded corners for a polished look */
+}
+</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Code Parallelizer  &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -35,29 +40,68 @@ color: rgb(255, 255, 255);</string>
    <widget class="QGroupBox" name="AppGroup">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>60</y>
-      <width>811</width>
-      <height>591</height>
+      <x>10</x>
+      <y>90</y>
+      <width>1371</width>
+      <height>861</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 46, 0);</string>
+     <string notr="true">/* Central Widget Background */
+QWidget#centralWidget {
+    background-color: #0c1f0c;  /* Deep green-black tone for subtle contrast */
+}
+
+/* GroupBox Styling */
+QGroupBox {
+    background-color: rgb(0, 46, 0);  /* Maintains your deep green */
+    border: 2px solid #2e7d32;        /* Softer green border */
+    border-radius: 12px;
+    margin-top: 3px;
+    padding: 14px;
+}
+
+/* Optional: GroupBox Title Style */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px;
+    color: #ffffff;
+    font: bold 14pt &quot;Segoe UI&quot;;
+    background-color: transparent;
+}
+</string>
     </property>
     <property name="title">
-     <string>App</string>
+     <string/>
     </property>
     <widget class="QPushButton" name="pb_convert_uploadCode">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>30</x>
        <y>20</y>
-       <width>211</width>
+       <width>611</width>
        <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">QPushButton {
+    font: 700 14pt &quot;Segoe UI&quot;;
+    background-color: #2e7d32;            /* Dark green */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #388e3c;
+}
+
+QPushButton:pressed {
+    background-color: #1b5e20;
+}
+</string>
      </property>
      <property name="text">
       <string>Upload Code</string>
@@ -66,28 +110,51 @@ color: rgb(255, 255, 255);</string>
     <widget class="QPlainTextEdit" name="plainTextEdit_SequentialCode">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>341</width>
-       <height>491</height>
+       <x>30</x>
+       <y>160</y>
+       <width>611</width>
+       <height>681</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 170, 127);
-font: 700 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">   background-color: rgb(255, 170, 127);
+    font: 700 14pt &quot;Segoe UI&quot;;
+    color: #2e2e2e;
+    border-radius: 8px;
+    padding: 10px;
+    border: 2px solid #1b5e20;
+
+
+</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pb_ParallelizeCode">
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>680</x>
        <y>20</y>
-       <width>211</width>
+       <width>671</width>
        <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 700 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">QPushButton {
+    font: 700 14pt &quot;Segoe UI&quot;;
+    background-color: #2e7d32;            /* Dark green */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: #388e3c;
+}
+
+QPushButton:pressed {
+    background-color: #1b5e20;
+}
+</string>
      </property>
      <property name="text">
       <string>Parallelize Code</string>
@@ -96,15 +163,70 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
     <widget class="QPlainTextEdit" name="plainTextEdit_ParallelizedCode">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>80</y>
-       <width>431</width>
-       <height>491</height>
+       <x>680</x>
+       <y>160</y>
+       <width>671</width>
+       <height>681</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 170, 127);
-font: 700 14pt &quot;Segoe UI&quot;;</string>
+      <string notr="true">
+    background-color: rgb(255, 170, 127);  /* Orange-ish */
+    font: 700 14pt &quot;Segoe UI&quot;;             /* Bold, 14pt Segoe UI */
+    color: black;                          /* Optional: Set text color for contrast */
+    border: 1px solid #555;                /* Optional: Add subtle border */
+    padding: 6px;                          /* Optional: Improve readability */
+    border-radius: 6px;                    /* Optional: Rounded corners */
+
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>611</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    font: 700 14pt &quot;Segoe UI&quot;;            /* Bold, 14pt Segoe UI */
+    color: white;                         /* White text for dark backgrounds */
+    background-color: rgb(0, 85, 127);        /* Keep background clean */
+    padding: 4px 8px;                     /* Slight padding for spacing */
+    border: none;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Input Code&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>90</y>
+       <width>671</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    font: 700 14pt &quot;Segoe UI&quot;;            /* Bold, 14pt Segoe UI */
+    color: white;                         /* White text for dark backgrounds */
+    background-color: rgb(0, 85, 127);        /* Keep background clean */
+    padding: 4px 8px;                     /* Slight padding for spacing */
+    border: none;
+    border-radius: 6px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;OutPut Code&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
@@ -114,7 +236,7 @@ font: 700 14pt &quot;Segoe UI&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>948</width>
+     <width>1416</width>
      <height>17</height>
     </rect>
    </property>
